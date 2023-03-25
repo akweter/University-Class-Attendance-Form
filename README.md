@@ -8,8 +8,8 @@
 
 ### Installing the web app.
 
-#### [Fork the code here:](https://github.com/john-BAPTIS/Class-Attendance-Form.git/)</br>
-#### [View the App:](netlify.com/)
+#### [Fork the code here:](https://github.com/john-BAPTIS/University-Class-Attendance-Form.git)</br>
+#### [View the system:](https://jamesakweter.online/project/classForm)
 
 ***IMPORTANT NOTE ***.
 
@@ -24,12 +24,12 @@
 1. The project was built with the newest version of PHP.
 2. Package manager was not assigned to the app. Thus, you have your storage saved from packages.
 3. Depending modeules like `Uikit` & `Bootstrap` are inculded.
-4. Begin the [forkin](url:here). 
+4. Begin the [forkin](https://github.com/john-BAPTIS/University-Class-Attendance-Form.git). 
 
 
 ### Reporting issues and contributing code
 
-Issues must sent to my [personal mail](jamesakweter@gmail.com)
+Issues must sent to my [personal mail](dev@jamesakweter.online)
 
 ### Feel free to connect with me
 [Instagram](instagram.com)
