@@ -8,5 +8,6 @@ session_start();
     $date->setTimeZone(new DateTimeZone('Africa/Accra'));
     $current_time = $date->format("H:i:s A");
     $current_date = $date->format('D d m Y');
+    $current_ampm = $date->format("A");
 
 ?>

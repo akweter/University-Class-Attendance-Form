@@ -6,14 +6,12 @@
     if (empty($_SESSION['log_status'])) {
         header("location: ../");
     }
-    else {
-        // FETCH USER INFORMATION TO COMPLETE THE CHECOUT
+        // FETCH USER INFORMATION TO COMPLETE THE SUBMISSION
         if (! empty(isset($_GET['details']))) { 
             $student_id = $_GET['details'];
-            $log_status = $_SESSION['log_status'];
 
             // FETCH USER DETAILS PER THE USERNAME $f_id = $info['f_id']; 
-            $sid = mysqli_query($PDO, "SELECT * FROM `students_data` WHERE f_id = '$student_id' OR student_index = '$student_id' AND deleted = 'no' ");
+            $sid = mysqli_query($PDO, "SELECT * FROM `students_data` WHERE student_f_name = '$student_id' OR student_index = '$student_id' AND deleted = 'not' ");
             while($Val = mysqli_fetch_array($sid)){
                 $f_id = $Val['f_id'];
                 $s_index = $Val['student_index'];
@@ -30,7 +28,6 @@
         else {
             header("location: ../");
         }
-    }
 ?>
 
 
@@ -45,6 +42,7 @@
         <meta name="generator" content="Angel Dev Team">
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <title> | Bluecrest Go Club</title>
+        <link rel="stylesheet" href="../../node_modules/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
@@ -91,7 +89,7 @@
                                 <!-- <tr><td>Password</td><td><?=$c_Password?></td></tr> -->
                             </tbody>
                         </table>
-                        <a href="./edit_details.php?editDetails=<?=$f_id?>" class="btn btn-outline-primary btn-lg form-control">Edit My Account</a>
+                        <a href="./edit_details.php?editDetails=<?=$f_id?>" class="btn btn-outline-warning btn-lg form-control">Edit <?php if(empty($s_f_name)){echo("<div>User Account</div>");} else{echo($s_f_name. " " .$s_l_name);}?></a>
                     
                 </div>
             </div>
