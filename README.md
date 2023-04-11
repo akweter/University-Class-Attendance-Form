@@ -1,4 +1,4 @@
-[Class Attendance Form](netlify.com) - No more pen and paper.
+No more pen and paper.
 ================================
 
 *** The Class Attendance Form made easier for teachers and college class reps to fill in the details of each class held at a particular time.***
